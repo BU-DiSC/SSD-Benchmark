@@ -1,0 +1,35 @@
+random-read-3: (g=0): rw=randread, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 3 processes
+random-read-3: Laying out IO file (1 file / 20480MiB)
+random-read-3: Laying out IO file (1 file / 20480MiB)
+random-read-3: Laying out IO file (1 file / 20480MiB)
+
+random-read-3: (groupid=0, jobs=3): err= 0: pid=108595: Wed Jan 10 21:26:29 2024
+  read: IOPS=436k, BW=3408MiB/s (3574MB/s)(60.0GiB/18028msec)
+    slat (nsec): min=924, max=152799, avg=2370.64, stdev=1730.92
+    clat (usec): min=80, max=21241, avg=814.82, stdev=675.90
+     lat (usec): min=81, max=21245, avg=817.19, stdev=675.98
+    clat percentiles (usec):
+     |  1.00th=[  200],  5.00th=[  247], 10.00th=[  281], 20.00th=[  330],
+     | 30.00th=[  392], 40.00th=[  465], 50.00th=[  570], 60.00th=[  717],
+     | 70.00th=[  914], 80.00th=[ 1205], 90.00th=[ 1696], 95.00th=[ 2180],
+     | 99.00th=[ 3294], 99.50th=[ 3785], 99.90th=[ 5080], 99.95th=[ 5735],
+     | 99.99th=[ 8094]
+   bw (  MiB/s): min= 3428, max= 5627, per=100.00%, avg=3626.14, stdev=346.38, samples=99
+   iops        : min=438858, max=720356, avg=464145.36, stdev=44336.60, samples=99
+  lat (usec)   : 100=0.01%, 250=5.43%, 500=38.19%, 750=18.46%, 1000=11.50%
+  lat (msec)   : 2=19.98%, 4=6.06%, 10=0.37%, 20=0.01%, 50=0.01%
+  cpu          : usr=15.99%, sys=41.44%, ctx=2848312, majf=0, minf=796
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=7864320,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3408MiB/s (3574MB/s), 3408MiB/s-3408MiB/s (3574MB/s-3574MB/s), io=60.0GiB (64.4GB), run=18028-18028msec
+
+Disk stats (read/write):
+  nvme4n1: ios=7853211/0, merge=0/0, ticks=0/0, in_queue=0, util=99.47%

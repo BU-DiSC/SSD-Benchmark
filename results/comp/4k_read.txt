@@ -1,0 +1,220 @@
+device: (g=0): rw=read, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+random-read-1: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+random-read-2: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-3: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-4: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-5: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-10: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-15: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-20: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+random-read-25: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 85 threads and 1 process
+device: Laying out IO file (1 file / 10240MiB)
+random-read-1: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-2: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-2: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-3: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-3: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-3: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-4: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-4: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-4: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-4: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-5: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-5: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-5: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-5: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-5: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-10: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-15: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-20: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+random-read-25: Laying out IO file (1 file / 10240MiB)
+fio: pid=0, err=13/file:filesetup.c:174, func=open, error=Permission denied
+
+device: (groupid=0, jobs=1): err= 0: pid=95626: Wed Jan 10 19:06:48 2024
+  read: IOPS=427k, BW=1667MiB/s (1748MB/s)(10.0GiB/6142msec)
+    slat (nsec): min=804, max=174905, avg=1562.56, stdev=926.96
+    clat (usec): min=34, max=1085, avg=298.05, stdev=151.25
+     lat (usec): min=36, max=1086, avg=299.61, stdev=151.29
+    clat percentiles (usec):
+     |  1.00th=[   74],  5.00th=[   93], 10.00th=[  122], 20.00th=[  159],
+     | 30.00th=[  198], 40.00th=[  233], 50.00th=[  273], 60.00th=[  314],
+     | 70.00th=[  367], 80.00th=[  433], 90.00th=[  519], 95.00th=[  578],
+     | 99.00th=[  693], 99.50th=[  734], 99.90th=[  824], 99.95th=[  857],
+     | 99.99th=[  930]
+   bw (  MiB/s): min= 1571, max= 1740, per=100.00%, avg=1668.00, stdev=51.31, samples=11
+   iops        : min=402387, max=445666, avg=427007.64, stdev=13134.35, samples=11
+  lat (usec)   : 50=0.01%, 100=6.21%, 250=38.42%, 500=43.61%, 750=11.35%
+  lat (usec)   : 1000=0.40%
+  lat (msec)   : 2=0.01%
+  cpu          : usr=25.09%, sys=69.06%, ctx=114626, majf=0, minf=140
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=2621440,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=1667MiB/s (1748MB/s), 1667MiB/s-1667MiB/s (1748MB/s-1748MB/s), io=10.0GiB (10.7GB), run=6142-6142msec
+
+Disk stats (read/write):
+  nvme4n1: ios=2533367/0, merge=0/0, ticks=0/0, in_queue=0, util=98.38%
