@@ -1,0 +1,21 @@
+[global]
+bs=4k
+#random_generator=lfsr
+#no buffer
+direct=1
+ioengine=libaio
+iodepth=128
+#bind to cpu 0
+cpus_allowed=0-23,48-71
+cpus_allowed_policy=split
+bs=4k
+size=10240m
+#rw = read, write, randread, randwrite, readwrite, reandrw
+numa_mem_policy=local
+directory=/storageCompSSD/bench/
+group_reporting
+
+[random-write-10]
+rw=randwrite
+#thread=1
+numjobs=10
