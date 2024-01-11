@@ -1,4 +1,4 @@
-# Configuration of Flex I/O Benchmarking
+# Configuration of Flexible I/O Tester
 Used for Testing NVMe SSD @BU-DiSC
 
 [1] comp -> Computational NVMe SSD
