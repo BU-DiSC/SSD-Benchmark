@@ -1,0 +1,39 @@
+seq-read-8: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 8 processes
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+seq-read-8: Laying out IO file (1 file / 30720MiB)
+
+seq-read-8: (groupid=0, jobs=8): err= 0: pid=245930: Mon Jan 22 00:17:27 2024
+  read: IOPS=48.8k, BW=6106MiB/s (6403MB/s)(240GiB/40247msec)
+    slat (nsec): min=1103, max=528722, avg=1635.43, stdev=2418.31
+    clat (usec): min=3092, max=41543, avg=20957.46, stdev=644.97
+     lat (usec): min=3095, max=41546, avg=20959.09, stdev=644.73
+    clat percentiles (usec):
+     |  1.00th=[19792],  5.00th=[20055], 10.00th=[20055], 20.00th=[20317],
+     | 30.00th=[20579], 40.00th=[20841], 50.00th=[21103], 60.00th=[21103],
+     | 70.00th=[21365], 80.00th=[21365], 90.00th=[21627], 95.00th=[21627],
+     | 99.00th=[22152], 99.50th=[22152], 99.90th=[22676], 99.95th=[24511],
+     | 99.99th=[36963]
+   bw (  MiB/s): min= 5854, max= 6371, per=100.00%, avg=6109.14, stdev=17.51, samples=640
+   iops        : min=46832, max=50974, avg=48873.10, stdev=140.12, samples=640
+  lat (msec)   : 4=0.01%, 10=0.01%, 20=2.70%, 50=97.28%
+  cpu          : usr=0.11%, sys=1.04%, ctx=1954344, majf=0, minf=4237
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1966080,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=6106MiB/s (6403MB/s), 6106MiB/s-6106MiB/s (6403MB/s-6403MB/s), io=240GiB (258GB), run=40247-40247msec
+
+Disk stats (read/write):
+  nvme1n1: ios=1966083/17, merge=13/10, ticks=41190847/20, in_queue=41190867, util=99.80%

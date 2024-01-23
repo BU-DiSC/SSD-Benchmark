@@ -1,0 +1,41 @@
+random-read-9: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 9 processes
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+random-read-9: Laying out IO file (1 file / 30720MiB)
+
+random-read-9: (groupid=0, jobs=9): err= 0: pid=228146: Sun Jan 21 01:26:09 2024
+  read: IOPS=925k, BW=3613MiB/s (3789MB/s)(270GiB/76519msec)
+    slat (nsec): min=743, max=127347, avg=1200.51, stdev=1138.83
+    clat (usec): min=59, max=5417, avg=1243.77, stdev=214.41
+     lat (usec): min=60, max=5418, avg=1244.97, stdev=214.41
+    clat percentiles (usec):
+     |  1.00th=[  955],  5.00th=[ 1012], 10.00th=[ 1045], 20.00th=[ 1090],
+     | 30.00th=[ 1123], 40.00th=[ 1156], 50.00th=[ 1188], 60.00th=[ 1237],
+     | 70.00th=[ 1287], 80.00th=[ 1369], 90.00th=[ 1516], 95.00th=[ 1663],
+     | 99.00th=[ 2008], 99.50th=[ 2147], 99.90th=[ 2474], 99.95th=[ 2638],
+     | 99.99th=[ 2966]
+   bw (  MiB/s): min= 3578, max= 3641, per=100.00%, avg=3617.12, stdev= 1.13, samples=1368
+   iops        : min=916196, max=932158, avg=925981.78, stdev=289.21, samples=1368
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=3.84%
+  lat (msec)   : 2=95.12%, 4=1.02%, 10=0.01%
+  cpu          : usr=4.19%, sys=10.52%, ctx=41836517, majf=0, minf=1251
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=70778880,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3613MiB/s (3789MB/s), 3613MiB/s-3613MiB/s (3789MB/s-3789MB/s), io=270GiB (290GB), run=76519-76519msec
+
+Disk stats (read/write):
+  nvme1n1: ios=70719776/18, merge=0/11, ticks=87815488/2, in_queue=87815490, util=99.96%

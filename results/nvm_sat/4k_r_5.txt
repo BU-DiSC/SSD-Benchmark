@@ -1,0 +1,37 @@
+random-read-5: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 5 processes
+random-read-5: Laying out IO file (1 file / 30720MiB)
+random-read-5: Laying out IO file (1 file / 30720MiB)
+random-read-5: Laying out IO file (1 file / 30720MiB)
+random-read-5: Laying out IO file (1 file / 30720MiB)
+random-read-5: Laying out IO file (1 file / 30720MiB)
+
+random-read-5: (groupid=0, jobs=5): err= 0: pid=227591: Sun Jan 21 01:13:28 2024
+  read: IOPS=925k, BW=3614MiB/s (3790MB/s)(150GiB/42496msec)
+    slat (nsec): min=745, max=262154, avg=1198.16, stdev=1081.38
+    clat (usec): min=59, max=3357, avg=690.06, stdev=207.53
+     lat (usec): min=61, max=3358, avg=691.26, stdev=207.52
+    clat percentiles (usec):
+     |  1.00th=[  449],  5.00th=[  482], 10.00th=[  502], 20.00th=[  537],
+     | 30.00th=[  562], 40.00th=[  594], 50.00th=[  627], 60.00th=[  676],
+     | 70.00th=[  734], 80.00th=[  816], 90.00th=[  955], 95.00th=[ 1106],
+     | 99.00th=[ 1434], 99.50th=[ 1582], 99.90th=[ 1926], 99.95th=[ 2073],
+     | 99.99th=[ 2409]
+   bw (  MiB/s): min= 3601, max= 3635, per=100.00%, avg=3617.59, stdev= 1.31, samples=420
+   iops        : min=921966, max=930614, avg=926101.90, stdev=336.41, samples=420
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=9.04%, 750=63.70%, 1000=19.09%
+  lat (msec)   : 2=8.09%, 4=0.07%
+  cpu          : usr=8.67%, sys=21.21%, ctx=18866208, majf=0, minf=692
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=39321600,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3614MiB/s (3790MB/s), 3614MiB/s-3614MiB/s (3790MB/s-3790MB/s), io=150GiB (161GB), run=42496-42496msec
+
+Disk stats (read/write):
+  nvme1n1: ios=39219457/8, merge=0/6, ticks=26978239/0, in_queue=26978239, util=99.82%
