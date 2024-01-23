@@ -1,0 +1,20 @@
+[global]
+bs=128k
+#random_generator=lfsr
+#no buffer
+direct=1
+ioengine=libaio
+iodepth=128
+#bind to cpu 0
+cpus_allowed=0-23,48-71
+cpus_allowed_policy=split
+size=30720m
+#rw = read, write, randread, randwrite, readwrite, reandrw
+numa_mem_policy=local
+directory=/storageNVM/bench/
+group_reporting
+
+[seq-read-8]
+rw=read
+#thread=1
+numjobs=8

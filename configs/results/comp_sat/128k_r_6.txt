@@ -1,0 +1,37 @@
+seq-read-6: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 6 processes
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+seq-read-6: Laying out IO file (1 file / 40960MiB)
+
+seq-read-6: (groupid=0, jobs=6): err= 0: pid=247930: Mon Jan 22 00:45:21 2024
+  read: IOPS=28.1k, BW=3513MiB/s (3684MB/s)(240GiB/69952msec)
+    slat (nsec): min=1065, max=384978, avg=2115.82, stdev=1635.08
+    clat (usec): min=2428, max=57746, avg=27319.58, stdev=1654.28
+     lat (usec): min=2431, max=57747, avg=27321.70, stdev=1654.22
+    clat percentiles (usec):
+     |  1.00th=[24511],  5.00th=[25297], 10.00th=[25560], 20.00th=[26084],
+     | 30.00th=[26608], 40.00th=[26870], 50.00th=[27132], 60.00th=[27395],
+     | 70.00th=[27919], 80.00th=[28181], 90.00th=[29230], 95.00th=[30016],
+     | 99.00th=[33162], 99.50th=[34866], 99.90th=[37487], 99.95th=[39060],
+     | 99.99th=[43779]
+   bw (  MiB/s): min= 3469, max= 3553, per=100.00%, avg=3513.89, stdev= 2.25, samples=834
+   iops        : min=27754, max=28430, avg=28111.14, stdev=17.99, samples=834
+  lat (msec)   : 4=0.01%, 10=0.01%, 20=0.02%, 50=99.96%, 100=0.01%
+  cpu          : usr=0.79%, sys=0.90%, ctx=1934726, majf=3, minf=3187
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=1966080,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3513MiB/s (3684MB/s), 3513MiB/s-3513MiB/s (3684MB/s-3684MB/s), io=240GiB (258GB), run=69952-69952msec
+
+Disk stats (read/write):
+  nvme4n1: ios=1960873/8, merge=0/0, ticks=0/0, in_queue=0, util=99.88%

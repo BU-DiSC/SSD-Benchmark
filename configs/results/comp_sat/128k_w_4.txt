@@ -1,0 +1,37 @@
+seq-write-4: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 4 processes
+seq-write-4: Laying out IO file (1 file / 40960MiB)
+seq-write-4: Laying out IO file (1 file / 40960MiB)
+seq-write-4: Laying out IO file (1 file / 40960MiB)
+seq-write-4: Laying out IO file (1 file / 40960MiB)
+
+seq-write-4: (groupid=0, jobs=4): err= 0: pid=248943: Mon Jan 22 01:05:11 2024
+  write: IOPS=23.0k, BW=2874MiB/s (3013MB/s)(160GiB/57016msec); 0 zone resets
+    slat (usec): min=2, max=21147, avg= 6.90, stdev=18.70
+    clat (usec): min=713, max=233104, avg=22260.94, stdev=15544.32
+     lat (usec): min=722, max=233112, avg=22267.84, stdev=15544.27
+    clat percentiles (msec):
+     |  1.00th=[   18],  5.00th=[   19], 10.00th=[   19], 20.00th=[   19],
+     | 30.00th=[   20], 40.00th=[   20], 50.00th=[   20], 60.00th=[   21],
+     | 70.00th=[   21], 80.00th=[   22], 90.00th=[   24], 95.00th=[   30],
+     | 99.00th=[   92], 99.50th=[  180], 99.90th=[  211], 99.95th=[  218],
+     | 99.99th=[  224]
+   bw (  MiB/s): min=  453, max= 3370, per=99.97%, avg=2872.68, stdev=153.01, samples=453
+   iops        : min= 3630, max=26960, avg=22981.41, stdev=1224.10, samples=453
+  lat (usec)   : 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.03%, 20=62.07%, 50=36.61%
+  lat (msec)   : 100=0.39%, 250=0.89%
+  cpu          : usr=2.95%, sys=1.99%, ctx=1142025, majf=0, minf=42
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,1310720,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=2874MiB/s (3013MB/s), 2874MiB/s-2874MiB/s (3013MB/s-3013MB/s), io=160GiB (172GB), run=57016-57016msec
+
+Disk stats (read/write):
+  nvme4n1: ios=0/1307728, merge=0/0, ticks=0/0, in_queue=0, util=92.60%

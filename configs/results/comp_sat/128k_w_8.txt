@@ -1,0 +1,40 @@
+seq-write-8: (g=0): rw=write, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 8 processes
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+seq-write-8: Laying out IO file (1 file / 40960MiB)
+
+seq-write-8: (groupid=0, jobs=8): err= 0: pid=249495: Mon Jan 22 01:11:31 2024
+  write: IOPS=22.6k, BW=2826MiB/s (2964MB/s)(320GiB/115939msec); 0 zone resets
+    slat (usec): min=2, max=167, avg= 7.92, stdev= 2.29
+    clat (usec): min=1242, max=463652, avg=45279.14, stdev=30165.16
+     lat (usec): min=1256, max=463659, avg=45287.06, stdev=30165.20
+    clat percentiles (msec):
+     |  1.00th=[   37],  5.00th=[   38], 10.00th=[   38], 20.00th=[   39],
+     | 30.00th=[   40], 40.00th=[   40], 50.00th=[   40], 60.00th=[   41],
+     | 70.00th=[   43], 80.00th=[   44], 90.00th=[   49], 95.00th=[   58],
+     | 99.00th=[  218], 99.50th=[  317], 99.90th=[  393], 99.95th=[  401],
+     | 99.99th=[  439]
+   bw (  MiB/s): min=  297, max= 3363, per=100.00%, avg=2827.32, stdev=80.71, samples=1848
+   iops        : min= 2382, max=26906, avg=22618.59, stdev=645.68, samples=1848
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%, 20=0.01%, 50=91.77%
+  lat (msec)   : 100=6.37%, 250=1.00%, 500=0.83%
+  cpu          : usr=1.80%, sys=0.76%, ctx=1546376, majf=0, minf=95
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,2621440,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=2826MiB/s (2964MB/s), 2826MiB/s-2826MiB/s (2964MB/s-2964MB/s), io=320GiB (344GB), run=115939-115939msec
+
+Disk stats (read/write):
+  nvme4n1: ios=0/2621169, merge=0/0, ticks=0/0, in_queue=0, util=92.14%

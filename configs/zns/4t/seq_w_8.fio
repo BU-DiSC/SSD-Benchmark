@@ -1,0 +1,22 @@
+[global]
+bs=64k
+zonemode=zbd
+#no buffer
+direct=1
+ioengine=psync
+#bind to cpu 0
+cpus_allowed=0-23,48-71
+cpus_allowed_policy=split
+#rw = read, write, randread, randwrite, readwrite, reandrw
+numa_mem_policy=local
+filename=/dev/nvme3n2
+group_reporting
+#to be studied
+offset_increment=8z
+size=8z
+job_max_open_zones=1
+
+[seq-write-8]
+rw=write
+#thread=1
+numjobs=8
