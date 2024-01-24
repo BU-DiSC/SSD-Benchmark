@@ -7,7 +7,7 @@ Used for Testing NVMe SSD @BU-DiSC
 
 [3] nvm_sat -> Extra Samsung NVMe SSD tested when space are running out (~300 GB left out of 1.92 TB)
 
-[4] comp -> Computational NVMe SSD tested when space are running out (~500GB left out of 3.84 TB)
+[4] comp_sat -> Computational NVMe SSD tested when space are running out (~500GB left out of 3.84 TB)
 
 [5] zns_1t -> ZNS SSD with 1 TB capacity
 
