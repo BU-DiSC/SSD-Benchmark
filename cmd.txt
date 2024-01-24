@@ -1,0 +1,7 @@
+sudo fio 4k_r_1.fio --output=/usr/local/bench/4k_r_1.txt
+sudo fio 4k_r_2.fio --output=/usr/local/bench/4k_r_2.txt
+sudo fio 4k_r_3.fio --output=/usr/local/bench/4k_r_3.txt
+sudo fstrim -v /storageCompSSD
+sudo fstrim -v /storageNVM
+
+sudo fio sat.fio --output=/usr/local/bench/sat.txt
