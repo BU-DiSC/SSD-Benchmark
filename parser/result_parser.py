@@ -10,7 +10,7 @@ match_dict = {
     "8k":"8k",
     "128k":"128k"
 }
-
+#change this to where results are
 read_dir="./results/zns_4t/"
 list_of_file = get_file_with_name(read_dir, pattern)
 t = []
