@@ -13,7 +13,7 @@ done
 sleep 10
 
 a=1
-a_max=300
+a_max=10
 
 while [ $a -le $a_max ]
 do
@@ -24,7 +24,7 @@ done
 sleep 10
 
 a=1
-a_max=300
+a_max=10
 
 while [ $a -le $a_max ]
 do
@@ -35,7 +35,7 @@ done
 sleep 10
 
 a=1
-a_max=300
+a_max=10
 
 while [ $a -le $a_max ]
 do
