@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-import os, subprocess, glob, multiprocessing, ntpath, shlex, filecmp, random, string
+import os, subprocess, glob, multiprocessing, ntpath, shlex, filecmp, random, string, progressbar
 from datetime import datetime
 from multiprocessing.pool import ThreadPool
 
@@ -21,3 +21,24 @@ def get_file_with_name(wdir, fname):
     wdir = validir(wdir)
     res = glob.glob(wdir+fname)
     return res
+    
+#write a specific file to a system location with content
+def writefile(filename, content, print_progress = True):
+    res = open(filename, "w")
+    if(print_progress):
+        lenf1 = len(content)
+        bar = progressbar.ProgressBar(maxval=lenf1, \
+        widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+        bar.start()
+        cnt = 0
+        for i in content:
+            res.write(str(i))
+            res.write("\n")
+            cnt += 1
+            bar.update(cnt)
+        bar.finish()
+    else:
+        for i in content:
+            res.write(str(i))
+            res.write("\n")
+    res.close()
