@@ -1,0 +1,35 @@
+random-write-2: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.19
+Starting 2 processes
+random-write-2: Laying out IO file (1 file / 5120MiB)
+random-write-2: Laying out IO file (1 file / 5120MiB)
+
+random-write-2: (groupid=0, jobs=2): err= 0: pid=1182574: Thu Jan 25 22:31:25 2024
+  write: IOPS=247k, BW=965MiB/s (1012MB/s)(10.0GiB/10612msec); 0 zone resets
+    slat (nsec): min=1175, max=35428k, avg=2609.49, stdev=22142.32
+    clat (usec): min=10, max=37747, avg=1022.99, stdev=473.52
+     lat (usec): min=12, max=37749, avg=1025.70, stdev=474.05
+    clat percentiles (usec):
+     |  1.00th=[   79],  5.00th=[  338], 10.00th=[  816], 20.00th=[  955],
+     | 30.00th=[  979], 40.00th=[  996], 50.00th=[ 1004], 60.00th=[ 1020],
+     | 70.00th=[ 1037], 80.00th=[ 1057], 90.00th=[ 1139], 95.00th=[ 1778],
+     | 99.00th=[ 2245], 99.50th=[ 2376], 99.90th=[ 2671], 99.95th=[ 2900],
+     | 99.99th=[ 4490]
+   bw (  KiB/s): min=889344, max=1073288, per=100.00%, avg=994434.75, stdev=20133.59, samples=40
+   iops        : min=222336, max=268322, avg=248608.55, stdev=5033.41, samples=40
+  lat (usec)   : 20=0.10%, 50=0.41%, 100=0.88%, 250=2.42%, 500=3.03%
+  lat (usec)   : 750=2.06%, 1000=35.17%
+  lat (msec)   : 2=52.85%, 4=3.07%, 10=0.01%, 50=0.01%
+  cpu          : usr=10.84%, sys=25.93%, ctx=40627, majf=0, minf=22
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,2621440,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=965MiB/s (1012MB/s), 965MiB/s-965MiB/s (1012MB/s-1012MB/s), io=10.0GiB (10.7GB), run=10612-10612msec
+
+Disk stats (read/write):
+  nvme0n1: ios=0/2589863, merge=0/0, ticks=0/408004, in_queue=408004, util=99.19%

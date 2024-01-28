@@ -1,0 +1,38 @@
+seq-read-7: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.19
+Starting 7 processes
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+seq-read-7: Laying out IO file (1 file / 5120MiB)
+
+seq-read-7: (groupid=0, jobs=7): err= 0: pid=973986: Thu Jan 25 01:16:45 2024
+  read: IOPS=19.9k, BW=2492MiB/s (2613MB/s)(35.0GiB/14384msec)
+    slat (usec): min=3, max=449, avg= 5.48, stdev= 6.12
+    clat (usec): min=3671, max=92250, avg=44930.72, stdev=2393.41
+     lat (usec): min=3675, max=92254, avg=44936.29, stdev=2392.53
+    clat percentiles (usec):
+     |  1.00th=[42206],  5.00th=[43254], 10.00th=[43254], 20.00th=[43779],
+     | 30.00th=[44303], 40.00th=[44303], 50.00th=[44827], 60.00th=[44827],
+     | 70.00th=[45351], 80.00th=[45876], 90.00th=[46400], 95.00th=[47449],
+     | 99.00th=[48497], 99.50th=[49021], 99.90th=[78119], 99.95th=[85459],
+     | 99.99th=[90702]
+   bw (  MiB/s): min= 2405, max= 2553, per=100.00%, avg=2494.11, stdev= 5.69, samples=196
+   iops        : min=19238, max=20430, avg=19950.79, stdev=45.62, samples=196
+  lat (msec)   : 4=0.01%, 10=0.04%, 20=0.07%, 50=99.56%, 100=0.31%
+  cpu          : usr=0.41%, sys=1.21%, ctx=279346, majf=0, minf=177
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=99.8%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=286720,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=2492MiB/s (2613MB/s), 2492MiB/s-2492MiB/s (2613MB/s-2613MB/s), io=35.0GiB (37.6GB), run=14384-14384msec
+
+Disk stats (read/write):
+  nvme0n1: ios=571371/13, merge=0/1, ticks=23277079/19, in_queue=23277099, util=99.53%

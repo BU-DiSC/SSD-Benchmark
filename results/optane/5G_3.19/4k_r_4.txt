@@ -1,0 +1,37 @@
+random-read-4: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.19
+Starting 4 processes
+random-read-4: Laying out IO file (1 file / 5120MiB)
+random-read-4: Laying out IO file (1 file / 5120MiB)
+random-read-4: Laying out IO file (1 file / 5120MiB)
+random-read-4: Laying out IO file (1 file / 5120MiB)
+
+random-read-4: (groupid=0, jobs=4): err= 0: pid=1176870: Thu Jan 25 22:05:05 2024
+  read: IOPS=587k, BW=2294MiB/s (2405MB/s)(20.0GiB/8928msec)
+    slat (nsec): min=1207, max=56316, avg=2322.92, stdev=630.52
+    clat (usec): min=8, max=8966, avg=868.11, stdev=77.59
+     lat (usec): min=11, max=8969, avg=870.53, stdev=77.59
+    clat percentiles (usec):
+     |  1.00th=[  848],  5.00th=[  857], 10.00th=[  857], 20.00th=[  857],
+     | 30.00th=[  857], 40.00th=[  865], 50.00th=[  865], 60.00th=[  865],
+     | 70.00th=[  873], 80.00th=[  873], 90.00th=[  889], 95.00th=[  898],
+     | 99.00th=[  906], 99.50th=[  914], 99.90th=[  947], 99.95th=[ 1647],
+     | 99.99th=[ 5014]
+   bw (  MiB/s): min= 2271, max= 2318, per=100.00%, avg=2298.38, stdev= 2.75, samples=68
+   iops        : min=581557, max=593418, avg=588384.41, stdev=703.88, samples=68
+  lat (usec)   : 10=0.01%, 20=0.01%, 50=0.01%, 100=0.01%, 250=0.01%
+  lat (usec)   : 500=0.30%, 750=0.19%, 1000=99.43%
+  lat (msec)   : 2=0.03%, 4=0.03%, 10=0.01%
+  cpu          : usr=14.30%, sys=39.49%, ctx=1698497, majf=0, minf=621
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=5242880,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=2294MiB/s (2405MB/s), 2294MiB/s-2294MiB/s (2405MB/s-2405MB/s), io=20.0GiB (21.5GB), run=8928-8928msec
+
+Disk stats (read/write):
+  nvme1n1: ios=5204926/0, merge=0/0, ticks=4500533/0, in_queue=4500533, util=99.02%
