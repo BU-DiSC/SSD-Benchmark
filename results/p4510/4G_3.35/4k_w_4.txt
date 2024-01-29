@@ -1,0 +1,37 @@
+random-write-4: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 4 processes
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+
+random-write-4: (groupid=0, jobs=4): err= 0: pid=1820767: Mon Jan 29 01:19:36 2024
+  write: IOPS=266k, BW=1039MiB/s (1089MB/s)(16.0GiB/15769msec); 0 zone resets
+    slat (nsec): min=1183, max=1325.7k, avg=2300.64, stdev=1801.92
+    clat (usec): min=32, max=14579, avg=1917.01, stdev=999.19
+     lat (usec): min=34, max=14581, avg=1919.31, stdev=999.18
+    clat percentiles (usec):
+     |  1.00th=[  318],  5.00th=[  465], 10.00th=[  644], 20.00th=[  914],
+     | 30.00th=[ 1156], 40.00th=[ 1450], 50.00th=[ 1860], 60.00th=[ 2376],
+     | 70.00th=[ 2638], 80.00th=[ 2868], 90.00th=[ 3130], 95.00th=[ 3425],
+     | 99.00th=[ 4113], 99.50th=[ 4555], 99.90th=[ 5604], 99.95th=[ 5932],
+     | 99.99th=[10814]
+   bw (  MiB/s): min=  883, max= 1202, per=100.00%, avg=1040.45, stdev=20.98, samples=124
+   iops        : min=226294, max=307938, avg=266354.65, stdev=5370.12, samples=124
+  lat (usec)   : 50=0.01%, 100=0.01%, 250=0.26%, 500=5.73%, 750=7.48%
+  lat (usec)   : 1000=10.07%
+  lat (msec)   : 2=29.06%, 4=46.13%, 10=1.26%, 20=0.01%
+  cpu          : usr=5.07%, sys=14.76%, ctx=619504, majf=0, minf=41
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,4194304,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=1039MiB/s (1089MB/s), 1039MiB/s-1039MiB/s (1089MB/s-1089MB/s), io=16.0GiB (17.2GB), run=15769-15769msec
+
+Disk stats (read/write):
+  nvme0n1: ios=0/4163401, merge=0/4, ticks=0/7138393, in_queue=7138393, util=99.45%

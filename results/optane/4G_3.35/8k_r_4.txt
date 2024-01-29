@@ -1,0 +1,36 @@
+random-read-4: (g=0): rw=randread, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 4 processes
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+
+random-read-4: (groupid=0, jobs=4): err= 0: pid=1805881: Mon Jan 29 00:27:59 2024
+  read: IOPS=253k, BW=1975MiB/s (2071MB/s)(16.0GiB/8295msec)
+    slat (nsec): min=1272, max=36693, avg=2381.73, stdev=432.27
+    clat (usec): min=471, max=5199, avg=2021.90, stdev=71.92
+     lat (usec): min=476, max=5201, avg=2024.29, stdev=71.91
+    clat percentiles (usec):
+     |  1.00th=[ 1975],  5.00th=[ 1991], 10.00th=[ 1991], 20.00th=[ 2008],
+     | 30.00th=[ 2024], 40.00th=[ 2024], 50.00th=[ 2024], 60.00th=[ 2024],
+     | 70.00th=[ 2024], 80.00th=[ 2040], 90.00th=[ 2040], 95.00th=[ 2040],
+     | 99.00th=[ 2057], 99.50th=[ 2073], 99.90th=[ 2638], 99.95th=[ 3425],
+     | 99.99th=[ 4752]
+   bw (  MiB/s): min= 1972, max= 1981, per=100.00%, avg=1977.08, stdev= 0.53, samples=64
+   iops        : min=252540, max=253614, avg=253067.00, stdev=67.82, samples=64
+  lat (usec)   : 500=0.01%, 750=0.02%, 1000=0.05%
+  lat (msec)   : 2=12.41%, 4=87.50%, 10=0.02%
+  cpu          : usr=6.84%, sys=20.82%, ctx=1944719, majf=0, minf=1064
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=2097152,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=1975MiB/s (2071MB/s), 1975MiB/s-1975MiB/s (2071MB/s-2071MB/s), io=16.0GiB (17.2GB), run=8295-8295msec
+
+Disk stats (read/write):
+  nvme1n1: ios=2058485/21, merge=0/3, ticks=4155363/36, in_queue=4155400, util=98.85%

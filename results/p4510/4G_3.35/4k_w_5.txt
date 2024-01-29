@@ -1,0 +1,39 @@
+random-write-5: (g=0): rw=randwrite, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 5 processes
+random-write-5: Laying out IO file (1 file / 4096MiB)
+random-write-5: Laying out IO file (1 file / 4096MiB)
+random-write-5: Laying out IO file (1 file / 4096MiB)
+random-write-5: Laying out IO file (1 file / 4096MiB)
+random-write-5: Laying out IO file (1 file / 4096MiB)
+
+random-write-5: (groupid=0, jobs=5): err= 0: pid=1820902: Mon Jan 29 01:19:57 2024
+  write: IOPS=260k, BW=1015MiB/s (1065MB/s)(20.0GiB/20170msec); 0 zone resets
+    slat (nsec): min=1160, max=432042k, avg=2622.96, stdev=217402.17
+    clat (usec): min=10, max=435318, avg=2445.13, stdev=2750.42
+     lat (usec): min=12, max=435321, avg=2447.75, stdev=2759.00
+    clat percentiles (usec):
+     |  1.00th=[  469],  5.00th=[  848], 10.00th=[ 1029], 20.00th=[ 1369],
+     | 30.00th=[ 1713], 40.00th=[ 2040], 50.00th=[ 2474], 60.00th=[ 2802],
+     | 70.00th=[ 3032], 80.00th=[ 3294], 90.00th=[ 3687], 95.00th=[ 4113],
+     | 99.00th=[ 4948], 99.50th=[ 5407], 99.90th=[10028], 99.95th=[11338],
+     | 99.99th=[74974]
+   bw (  KiB/s): min=696920, max=1274512, per=100.00%, avg=1041589.20, stdev=23760.94, samples=198
+   iops        : min=174230, max=318628, avg=260397.25, stdev=5940.23, samples=198
+  lat (usec)   : 20=0.01%, 50=0.01%, 100=0.01%, 250=0.13%, 500=0.98%
+  lat (usec)   : 750=1.98%, 1000=6.15%
+  lat (msec)   : 2=29.71%, 4=55.06%, 10=5.89%, 20=0.08%, 50=0.01%
+  lat (msec)   : 100=0.01%, 250=0.01%, 500=0.01%
+  cpu          : usr=4.44%, sys=12.48%, ctx=1328177, majf=0, minf=48
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,5242880,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=1015MiB/s (1065MB/s), 1015MiB/s-1015MiB/s (1065MB/s-1065MB/s), io=20.0GiB (21.5GB), run=20170-20170msec
+
+Disk stats (read/write):
+  nvme0n1: ios=0/5294122, merge=0/7, ticks=0/12057255, in_queue=12057254, util=99.47%
