@@ -1,0 +1,35 @@
+randread2: (g=0): rw=randread, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=1
+fio-3.35
+Starting 1 process
+
+randread2: (groupid=0, jobs=1): err= 0: pid=1774589: Sun Jan 28 22:42:06 2024
+  read: IOPS=79.6k, BW=622MiB/s (652MB/s)(25.5GiB/42065msec)
+    slat (nsec): min=1198, max=103544, avg=1877.73, stdev=446.41
+    clat (nsec): min=316, max=9986.9k, avg=10195.41, stdev=10590.01
+     lat (usec): min=10, max=9992, avg=12.07, stdev=10.62
+    clat percentiles (nsec):
+     |  1.00th=[ 9536],  5.00th=[ 9664], 10.00th=[ 9664], 20.00th=[ 9664],
+     | 30.00th=[ 9792], 40.00th=[ 9792], 50.00th=[ 9792], 60.00th=[ 9920],
+     | 70.00th=[ 9920], 80.00th=[10048], 90.00th=[11072], 95.00th=[11456],
+     | 99.00th=[15936], 99.50th=[19584], 99.90th=[34560], 99.95th=[37120],
+     | 99.99th=[40704]
+   bw (  KiB/s): min=507504, max=655904, per=100.00%, avg=636815.43, stdev=30307.13, samples=84
+   iops        : min=63438, max=81988, avg=79601.95, stdev=3788.36, samples=84
+  lat (nsec)   : 500=0.01%, 750=0.01%
+  lat (usec)   : 2=0.01%, 4=0.01%, 10=77.75%, 20=21.76%, 50=0.48%
+  lat (usec)   : 100=0.01%, 250=0.01%, 500=0.01%, 750=0.01%, 1000=0.01%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.01%
+  cpu          : usr=7.47%, sys=17.79%, ctx=3346080, majf=0, minf=135
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=3346432,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=622MiB/s (652MB/s), 622MiB/s-622MiB/s (652MB/s-652MB/s), io=25.5GiB (27.4GB), run=42065-42065msec
+
+Disk stats (read/write):
+  nvme1n1: ios=3331283/2, merge=0/0, ticks=31512/0, in_queue=31511, util=99.67%
+randread2: (g=0): rw=randread, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=1
+...
