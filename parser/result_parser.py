@@ -38,8 +38,12 @@ def proc_file(filedir):
             #split by colon
             seg = tr.split(":")
             if(seg[0].split("(")[0] == "clat"):
-                clat_raw = str(round(float(seg[1].split(",")[2].split("=")[1])))
-                clat = clat_raw + " " + seg[0].split("(")[1].split(")")[0]
+                clat_raw = round(float(seg[1].split(",")[2].split("=")[1]))
+                if(seg[0].split("(")[1].split(")")[0] == "usec"):
+                    clat = str(clat_raw) + " " + seg[0].split("(")[1].split(")")[0]
+                elif((seg[0].split("(")[1].split(")")[0] == "msec")):
+                    #clat = str(clat_raw * 1000) + " " + seg[0].split("(")[1].split(")")[0]
+                    clat = str(clat_raw * 1000) + " " + "usec"
             elif(seg[0].split("(")[0] == "bw"):
                 if(seg[0].split("(")[1].split(")")[0] == "KiB/s"):
                     bw_raw = str(round(float(seg[1].split(",")[3].split("=")[1])/1024))
@@ -52,10 +56,11 @@ def proc_file(filedir):
             elif(seg[0] == "cpu"):
                 cpu = str(round((float(seg[1].split(",")[0].split("=")[1][:-1]) + float(seg[1].split(",")[1].split("=")[1][:-1])) * int(threads)))
         res = str(block_size) + " " + rwmode + " [Threads]: " + str(threads) + " [IOPS]: " + iops + " [Bandwidth]: " + str(bw) + " [Latency]: " + clat + " [CPU]: " + cpu
-        csv_entry = ",".join([str(block_size) + " " + rwmode,str(threads),iops,str(bw_raw),clat_raw,cpu])
+        csv_entry = ",".join([str(block_size) + " " + rwmode,str(threads),iops,str(bw_raw),str(clat_raw),cpu])
     except:
         res = filename
         csv_entry = "None"
+
     return res, csv_entry, str(block_size) + " " + rwmode, int(threads)
 
 #serialize for output
