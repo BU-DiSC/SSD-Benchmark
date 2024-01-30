@@ -10,8 +10,8 @@ match_dict = {
     "8k":"8k",
     "128k":"128k"
 }
-
-read_dir= "./results/p4510/"
+res = [",Threads,IOPS,Bandwidth(MB/s),Latency(usec/msec),CPU"]
+read_dir= "E:/Code/fio-bench/fio-bench-config/results/p4510/4G_3.35/"
 output = "./bench_result.csv"
 list_of_file = get_file_with_name(read_dir, pattern)
 t = []
@@ -56,14 +56,41 @@ def proc_file(filedir):
     except:
         res = filename
         csv_entry = "None"
-    return res, csv_entry
+    return res, csv_entry, str(block_size) + " " + rwmode, int(threads)
 
-res = [",Threads,IOPS,Bandwidth(MB/s),Latency(usec/msec),CPU"]
+#serialize for output
+def serialize(input_dict, initial_list = []):
+    out = initial_list
+    for key in input_dict:
+        for i in input_dict[key]:
+            out.append(i[1])
+    return out
+
+#sort list
+def sort_list(unsort_list, idx):
+    return sorted(unsort_list, key = lambda x:x[idx])
+
+#temp result
+tr = {}
+#extract elements from list and add to dict
 for i in list_of_file:
     t = proc_file((i))
-    res.append(t[1])
+    key = t[2]
     print(t[0])
+    #res.append(t[1])
+    if(key in tr):
+        val = tr.get(key)
+        val.append([t[3],t[1]])
+        tr[key] = val
+    else:
+        tr[key] = [[t[3],t[1]]]
 
+#sort the dict based on threads
+for key in tr:
+    tr[key] = sort_list(tr[key],0)
+
+#prepare for output
+res = serialize(tr,res)
 #output file
 writefile(output, res)
 
