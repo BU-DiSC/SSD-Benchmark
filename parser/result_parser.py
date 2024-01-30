@@ -43,7 +43,8 @@ def proc_file(filedir):
                     clat = str(clat_raw) + " " + seg[0].split("(")[1].split(")")[0]
                 elif((seg[0].split("(")[1].split(")")[0] == "msec")):
                     #clat = str(clat_raw * 1000) + " " + seg[0].split("(")[1].split(")")[0]
-                    clat = str(clat_raw * 1000) + " " + "usec"
+                    clat_raw *= 1000
+                    clat = str(clat_raw) + " " + "usec"
             elif(seg[0].split("(")[0] == "bw"):
                 if(seg[0].split("(")[1].split(")")[0] == "KiB/s"):
                     bw_raw = str(round(float(seg[1].split(",")[3].split("=")[1])/1024))
