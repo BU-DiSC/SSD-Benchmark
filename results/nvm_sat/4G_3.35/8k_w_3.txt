@@ -1,0 +1,35 @@
+random-write-3: (g=0): rw=randwrite, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 3 processes
+random-write-3: Laying out IO file (1 file / 4096MiB)
+random-write-3: Laying out IO file (1 file / 4096MiB)
+random-write-3: Laying out IO file (1 file / 4096MiB)
+
+random-write-3: (groupid=0, jobs=3): err= 0: pid=819589: Tue Jan 30 18:10:17 2024
+  write: IOPS=139k, BW=1083MiB/s (1136MB/s)(12.0GiB/11342msec); 0 zone resets
+    slat (nsec): min=901, max=38116k, avg=1335.53, stdev=30427.69
+    clat (usec): min=294, max=41341, avg=2759.35, stdev=696.76
+     lat (usec): min=297, max=41342, avg=2760.69, stdev=697.37
+    clat percentiles (usec):
+     |  1.00th=[ 1942],  5.00th=[ 2507], 10.00th=[ 2507], 20.00th=[ 2573],
+     | 30.00th=[ 2606], 40.00th=[ 2671], 50.00th=[ 2737], 60.00th=[ 2769],
+     | 70.00th=[ 2835], 80.00th=[ 2900], 90.00th=[ 3032], 95.00th=[ 3195],
+     | 99.00th=[ 3392], 99.50th=[ 3654], 99.90th=[ 5800], 99.95th=[13698],
+     | 99.99th=[40109]
+   bw (  MiB/s): min=  929, max= 1180, per=100.00%, avg=1085.00, stdev=22.16, samples=66
+   iops        : min=119018, max=151092, avg=138879.73, stdev=2836.36, samples=66
+  lat (usec)   : 500=0.01%, 750=0.01%, 1000=0.04%
+  lat (msec)   : 2=1.05%, 4=98.49%, 10=0.34%, 20=0.04%, 50=0.04%
+  cpu          : usr=2.98%, sys=8.12%, ctx=1567992, majf=0, minf=31
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,1572864,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=1083MiB/s (1136MB/s), 1083MiB/s-1083MiB/s (1136MB/s-1136MB/s), io=12.0GiB (12.9GB), run=11342-11342msec
+
+Disk stats (read/write):
+  nvme1n1: ios=0/1546228, merge=0/8, ticks=0/4251590, in_queue=4251590, util=99.15%

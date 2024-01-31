@@ -1,0 +1,36 @@
+random-write-4: (g=0): rw=randwrite, bs=(R) 8192B-8192B, (W) 8192B-8192B, (T) 8192B-8192B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 4 processes
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+random-write-4: Laying out IO file (1 file / 4096MiB)
+
+random-write-4: (groupid=0, jobs=4): err= 0: pid=795926: Tue Jan 30 17:49:31 2024
+  write: IOPS=258k, BW=2019MiB/s (2118MB/s)(16.0GiB/8113msec); 0 zone resets
+    slat (nsec): min=971, max=24341k, avg=5045.71, stdev=26029.39
+    clat (usec): min=167, max=34671, avg=1973.35, stdev=1263.29
+     lat (usec): min=171, max=34674, avg=1978.39, stdev=1263.46
+    clat percentiles (usec):
+     |  1.00th=[  709],  5.00th=[  938], 10.00th=[ 1090], 20.00th=[ 1319],
+     | 30.00th=[ 1467], 40.00th=[ 1598], 50.00th=[ 1729], 60.00th=[ 1893],
+     | 70.00th=[ 2147], 80.00th=[ 2474], 90.00th=[ 2966], 95.00th=[ 3523],
+     | 99.00th=[ 5735], 99.50th=[ 7439], 99.90th=[18482], 99.95th=[28443],
+     | 99.99th=[33424]
+   bw (  MiB/s): min= 1477, max= 2552, per=100.00%, avg=2019.47, stdev=85.92, samples=64
+   iops        : min=189124, max=326670, avg=258492.50, stdev=10998.26, samples=64
+  lat (usec)   : 250=0.01%, 500=0.05%, 750=1.56%, 1000=5.16%
+  lat (msec)   : 2=58.44%, 4=31.71%, 10=2.90%, 20=0.09%, 50=0.09%
+  cpu          : usr=6.05%, sys=19.54%, ctx=1530826, majf=0, minf=39
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=0,2097152,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+  WRITE: bw=2019MiB/s (2118MB/s), 2019MiB/s-2019MiB/s (2118MB/s-2118MB/s), io=16.0GiB (17.2GB), run=8113-8113msec
+
+Disk stats (read/write):
+  nvme4n1: ios=0/2039675, merge=0/0, ticks=0/0, in_queue=0, util=97.42%

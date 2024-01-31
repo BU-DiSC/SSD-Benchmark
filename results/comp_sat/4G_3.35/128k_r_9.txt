@@ -1,0 +1,40 @@
+seq-read-9: (g=0): rw=read, bs=(R) 128KiB-128KiB, (W) 128KiB-128KiB, (T) 128KiB-128KiB, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 9 processes
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+seq-read-9: Laying out IO file (1 file / 4096MiB)
+
+seq-read-9: (groupid=0, jobs=9): err= 0: pid=785484: Tue Jan 30 17:42:48 2024
+  read: IOPS=28.1k, BW=3516MiB/s (3686MB/s)(36.0GiB/10486msec)
+    slat (nsec): min=1083, max=597468, avg=2244.86, stdev=6829.31
+    clat (usec): min=3378, max=87225, avg=40945.41, stdev=2672.36
+     lat (usec): min=3397, max=87227, avg=40947.65, stdev=2671.50
+    clat percentiles (usec):
+     |  1.00th=[36963],  5.00th=[38011], 10.00th=[38536], 20.00th=[39584],
+     | 30.00th=[40109], 40.00th=[40633], 50.00th=[40633], 60.00th=[41157],
+     | 70.00th=[41681], 80.00th=[42206], 90.00th=[43254], 95.00th=[44303],
+     | 99.00th=[46924], 99.50th=[49021], 99.90th=[68682], 99.95th=[73925],
+     | 99.99th=[79168]
+   bw (  MiB/s): min= 3487, max= 3533, per=100.00%, avg=3515.82, stdev= 1.10, samples=180
+   iops        : min=27900, max=28270, avg=28126.60, stdev= 8.78, samples=180
+  lat (msec)   : 4=0.02%, 10=0.06%, 20=0.11%, 50=99.42%, 100=0.40%
+  cpu          : usr=0.54%, sys=0.63%, ctx=292072, majf=0, minf=4769
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=99.8%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=294912,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3516MiB/s (3686MB/s), 3516MiB/s-3516MiB/s (3686MB/s-3686MB/s), io=36.0GiB (38.7GB), run=10486-10486msec
+
+Disk stats (read/write):
+  nvme4n1: ios=294912/12, merge=0/0, ticks=0/0, in_queue=0, util=98.71%

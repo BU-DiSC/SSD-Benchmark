@@ -1,0 +1,36 @@
+random-read-4: (g=0): rw=randread, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=libaio, iodepth=128
+...
+fio-3.35
+Starting 4 processes
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+random-read-4: Laying out IO file (1 file / 4096MiB)
+
+random-read-4: (groupid=0, jobs=4): err= 0: pid=800430: Tue Jan 30 17:51:42 2024
+  read: IOPS=871k, BW=3404MiB/s (3569MB/s)(16.0GiB/4813msec)
+    slat (nsec): min=805, max=102915, avg=1821.16, stdev=1321.10
+    clat (usec): min=63, max=11120, avg=584.84, stdev=469.78
+     lat (usec): min=64, max=11122, avg=586.66, stdev=469.78
+    clat percentiles (usec):
+     |  1.00th=[  143],  5.00th=[  167], 10.00th=[  190], 20.00th=[  235],
+     | 30.00th=[  293], 40.00th=[  359], 50.00th=[  433], 60.00th=[  529],
+     | 70.00th=[  660], 80.00th=[  848], 90.00th=[ 1188], 95.00th=[ 1516],
+     | 99.00th=[ 2311], 99.50th=[ 2671], 99.90th=[ 3589], 99.95th=[ 4047],
+     | 99.99th=[ 5211]
+   bw (  MiB/s): min= 3395, max= 3419, per=100.00%, avg=3406.85, stdev= 1.88, samples=36
+   iops        : min=869322, max=875378, avg=872152.44, stdev=481.84, samples=36
+  lat (usec)   : 100=0.01%, 250=22.82%, 500=34.25%, 750=18.22%, 1000=10.16%
+  lat (msec)   : 2=12.67%, 4=1.83%, 10=0.05%, 20=0.01%
+  cpu          : usr=20.50%, sys=43.90%, ctx=1347036, majf=1, minf=554
+  IO depths    : 1=0.1%, 2=0.1%, 4=0.1%, 8=0.1%, 16=0.1%, 32=0.1%, >=64=100.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.1%
+     issued rwts: total=4194304,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=128
+
+Run status group 0 (all jobs):
+   READ: bw=3404MiB/s (3569MB/s), 3404MiB/s-3404MiB/s (3569MB/s-3569MB/s), io=16.0GiB (17.2GB), run=4813-4813msec
+
+Disk stats (read/write):
+  nvme4n1: ios=4133625/0, merge=0/0, ticks=0/0, in_queue=0, util=97.93%

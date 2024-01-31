@@ -8,7 +8,7 @@ iodepth=128
 #bind to cpu 0
 cpus_allowed=0-23,48-71
 cpus_allowed_policy=split
-size=30720m
+size=4096m
 #rw = read, write, randread, randwrite, readwrite, reandrw
 numa_mem_policy=local
 directory=/storageNVM/bench/
