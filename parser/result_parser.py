@@ -11,7 +11,7 @@ match_dict = {
     "128k":"128k"
 }
 res = [",Threads,IOPS,Bandwidth(MB/s),Latency(usec),CPU"]
-read_dir= "E:/Code/fio-bench/fio-bench-config/results/p4510_legacy/"
+read_dir= "E:/Code/fio-bench/fio-bench-config/results/nvm_nofs/"
 output = "./bench_result.csv"
 list_of_file = get_file_with_name(read_dir, pattern)
 t = []
@@ -74,6 +74,8 @@ def serialize(input_dict, initial_list = []):
     for key in input_dict:
         for i in input_dict[key]:
             out.append(i[1])
+        #add one extra line
+        out.append(",,,,")
     return out
 
 #sort list
