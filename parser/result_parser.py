@@ -10,7 +10,7 @@ match_dict = {
     "8k":"8k",
     "128k":"128k"
 }
-res = [",Threads,IOPS,Bandwidth(MB/s),Latency(usec/msec),CPU"]
+res = [",Threads,IOPS,Bandwidth(MB/s),Latency(usec),CPU"]
 read_dir= "E:/Code/fio-bench/fio-bench-config/results/p4510_legacy/"
 output = "./bench_result.csv"
 list_of_file = get_file_with_name(read_dir, pattern)
@@ -47,8 +47,8 @@ def proc_file(filedir):
                     clat = str(clat_raw) + " " + "usec"
                 elif ((seg[0].split("(")[1].split(")")[0] == "nsec")):
                     # clat = str(clat_raw * 1000) + " " + seg[0].split("(")[1].split(")")[0]
-                    clat_raw /= 1000
-                    clat = str(round(clat_raw)) + " " + "usec"
+                    clat_raw = round(clat_raw / 1000)
+                    clat = str(clat_raw) + " " + "usec"
             elif(seg[0].split("(")[0] == "bw"):
                 if(seg[0].split("(")[1].split(")")[0] == "KiB/s"):
                     bw_raw = str(round(float(seg[1].split(",")[3].split("=")[1])/1024))
