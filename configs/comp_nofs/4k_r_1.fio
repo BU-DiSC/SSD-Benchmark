@@ -1,0 +1,20 @@
+[global]
+bs=4k
+runtime=300
+#no buffer
+direct=1
+ioengine=libaio
+iodepth=128
+#bind to cpu 0
+cpus_allowed=0-23,48-71
+cpus_allowed_policy=split
+size=10240m
+#rw = read, write, randread, randwrite, readwrite, reandrw
+numa_mem_policy=local
+filename=/dev/nvme4n1p1
+group_reporting
+
+[random-read-1]
+rw=randread
+#thread=1
+numjobs=1
